@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "sessions", schema = "seabattle_base")
-public class Session {
+public class SessionEntity {
 
     @Id
     private Integer id;
@@ -17,10 +17,10 @@ public class Session {
     @Column(name = "second_user_id")
     private User secondUser;
 
-    public Session() {
+    public SessionEntity() {
     }
 
-    public Session(User secondUser, Integer id, User firstUser) {
+    public SessionEntity(User secondUser, Integer id, User firstUser) {
         this.secondUser = secondUser;
         this.id = id;
         this.firstUser = firstUser;
