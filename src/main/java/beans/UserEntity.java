@@ -21,8 +21,7 @@ public class UserEntity {
     public UserEntity() {
     }
 
-    public UserEntity(Integer id, String username, String password, String email) {
-        this.id = id;
+    public UserEntity(String username, String password, String email) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -54,14 +53,6 @@ public class UserEntity {
         this.password = password;
     }
 
-    public Integer getId() {
-
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     @Override
     public String toString() {
