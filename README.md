@@ -2,6 +2,7 @@
 Server for requests from desktop and others.
 
 All maven dependencies here: 
+
 <dependency>
     <groupId>org.freemarker</groupId>
     <artifactId>freemarker</artifactId>
