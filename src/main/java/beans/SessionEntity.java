@@ -7,6 +7,7 @@ import javax.persistence.*;
 public class SessionEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     @ManyToOne
@@ -20,9 +21,8 @@ public class SessionEntity {
     public SessionEntity() {
     }
 
-    public SessionEntity(User secondUser, Integer id, User firstUser) {
+    public SessionEntity(User firstUser, User secondUser) {
         this.secondUser = secondUser;
-        this.id = id;
         this.firstUser = firstUser;
     }
 
