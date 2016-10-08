@@ -12,34 +12,34 @@ public class SessionEntity {
 
     @ManyToOne
     @Column(name = "first_user_id")
-    private User firstUser;
+    private UserEntity firstUser;
 
     @ManyToOne
     @Column(name = "second_user_id")
-    private User secondUser;
+    private UserEntity secondUser;
 
     public SessionEntity() {
     }
 
-    public SessionEntity(User firstUser, User secondUser) {
+    public SessionEntity(UserEntity firstUser, UserEntity secondUser) {
         this.secondUser = secondUser;
         this.firstUser = firstUser;
     }
 
-    public User getSecondUser() {
+    public UserEntity getSecondUser() {
         return secondUser;
     }
 
-    public void setSecondUser(User secondUser) {
+    public void setSecondUser(UserEntity secondUser) {
         this.secondUser = secondUser;
     }
 
-    public User getFirstUser() {
+    public UserEntity getFirstUser() {
 
         return firstUser;
     }
 
-    public void setFirstUser(User firstUser) {
+    public void setFirstUser(UserEntity firstUser) {
         this.firstUser = firstUser;
     }
 

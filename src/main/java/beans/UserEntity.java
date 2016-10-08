@@ -3,7 +3,7 @@ package beans;
 import javax.persistence.*;
 
 @Entity(name = "users")
-public class User {
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,10 +18,10 @@ public class User {
     @Column(name = "e-mail")
     private String email;
 
-    public User() {
+    public UserEntity() {
     }
 
-    public User(Integer id, String username, String password, String email) {
+    public UserEntity(Integer id, String username, String password, String email) {
         this.id = id;
         this.username = username;
         this.password = password;
