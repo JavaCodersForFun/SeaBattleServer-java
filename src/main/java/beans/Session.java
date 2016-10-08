@@ -50,4 +50,13 @@ public class Session {
     public void setId(Integer id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Session{" +
+                "id=" + id +
+                ", firstUser=" + firstUser +
+                ", secondUser=" + secondUser +
+                '}';
+    }
 }
