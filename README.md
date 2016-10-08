@@ -26,3 +26,16 @@ All maven dependencies here:
     <artifactId>hibernate</artifactId>
     <version>3.5.4-Final</version>
 </dependency>
+
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.12</version>
+</dependency>
+        
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>RELEASE</version>
+    <scope>test</scope>
+</dependency>
