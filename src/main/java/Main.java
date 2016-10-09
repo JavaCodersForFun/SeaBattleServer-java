@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 
 public class Main extends HttpServlet {
 
+    final int port = 8080;
     final static Logger logger = Logger.getLogger(Main.class);
 
     public static void main(String[] args) {
@@ -30,7 +31,7 @@ public class Main extends HttpServlet {
             No servlets this time.
          */
 
-        Server server = new Server(8080);
+        Server server = new Server(port);
         try {
 
             server.start();
