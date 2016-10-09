@@ -2,8 +2,6 @@ package entityservices;
 
 import beans.UserEntity;
 import org.hibernate.Session;
-import org.hibernate.criterion.Restrictions;
-import org.hibernate.query.Query;
 
 public class UserEntityService extends AbstractEntityService {
 
