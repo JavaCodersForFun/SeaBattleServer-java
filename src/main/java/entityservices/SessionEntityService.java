@@ -9,8 +9,6 @@ import java.util.List;
 
 public class SessionEntityService extends AbstractEntityService {
 
-    private Session session;
-
     public SessionEntityService(Session session) { this.session = session; }
 
     public SessionEntity create(UserEntity firstUser, UserEntity secondUser) {

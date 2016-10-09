@@ -5,8 +5,6 @@ import org.hibernate.Session;
 
 public class UserEntityService extends AbstractEntityService {
 
-    private Session session;
-
     public UserEntityService(Session session) {
         this.session = session;
     }
