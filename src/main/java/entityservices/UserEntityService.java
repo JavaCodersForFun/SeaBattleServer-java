@@ -22,9 +22,9 @@ public class UserEntityService extends AbstractEntityService {
 
     public UserEntity getUserByEmail(String emailadr) {
         return (UserEntity)
-                session.createQuery("from UserEntity where email=:email")
-                .setParameter("email", emailadr)
-                .uniqueResult();
+                session.createQuery("from beans.UserEntity where email = :emailAddress")
+                        .setParameter("emailAddress", emailadr)
+                        .uniqueResult();
     }
 
 }
