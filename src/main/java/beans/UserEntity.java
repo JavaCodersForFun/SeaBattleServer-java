@@ -2,24 +2,19 @@ package beans;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "users", schema = "seabattle_base")
+@Entity(name = "users")
 public class UserEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "username")
     private String username;
 
-    @Column(name = "password")
     private String password;
 
-    @Column(name = "e-mail")
     private String email;
 
-    @Column(name = "is_ready")
     private boolean is_ready;
 
     public boolean is_ready() {
@@ -34,9 +29,12 @@ public class UserEntity {
     }
 
     public UserEntity(String username, String password, String email) {
+
         this.username = username;
         this.password = password;
         this.email = email;
+        this.is_ready = false;
+
     }
 
     public String getUsername() {

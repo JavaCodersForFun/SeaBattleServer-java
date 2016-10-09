@@ -2,20 +2,17 @@ package beans;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "sessions", schema = "seabattle_base")
+@Entity(name = "sessions")
 public class SessionEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne
-    @Column(name = "first_user_id")
     private UserEntity firstUser;
 
     @ManyToOne
-    @Column(name = "second_user_id")
     private UserEntity secondUser;
 
     public SessionEntity() {
