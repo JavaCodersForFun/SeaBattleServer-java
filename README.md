@@ -56,4 +56,4 @@ JUnit - http://junit.org/junit4/
     <version>2.3.1</version>
 </dependency>
 
-https://github.com/google/gson
+GSON - https://github.com/google/gson
