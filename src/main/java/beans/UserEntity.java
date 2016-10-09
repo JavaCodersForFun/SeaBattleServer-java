@@ -3,7 +3,7 @@ package beans;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "sessions", schema = "seabattle_base")
+@Table(name = "users", schema = "seabattle_base")
 public class UserEntity {
 
     @Id
@@ -18,6 +18,9 @@ public class UserEntity {
 
     @Column(name = "e-mail")
     private String email;
+
+    @Column(name = "is_ready")
+    private boolean is_ready;
 
     public UserEntity() {
     }
