@@ -22,6 +22,14 @@ public class UserEntity {
     @Column(name = "is_ready")
     private boolean is_ready;
 
+    public boolean is_ready() {
+        return is_ready;
+    }
+
+    public void setIs_ready(boolean is_ready) {
+        this.is_ready = is_ready;
+    }
+
     public UserEntity() {
     }
 
