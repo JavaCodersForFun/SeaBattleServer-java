@@ -29,6 +29,7 @@ public class NewGameServlet extends HttpServlet {
         firstUser.getUserByEmail(paramsMap.get("e-mail")[0]).setIs_ready(true);
 
         /*
+        TODO!
         THREAD!
         !! AT THIS MOMENT WILL BE CREATED A RUNNABLE COMPONENT !!
         Watching for users who had is_ready - true option.
