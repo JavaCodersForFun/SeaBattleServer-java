@@ -2,6 +2,8 @@ package entityservices;
 
 import beans.UserEntity;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
+import org.hibernate.query.Query;
 
 public class UserEntityService extends AbstractEntityService {
 
@@ -18,6 +20,13 @@ public class UserEntityService extends AbstractEntityService {
         UserEntity userEntity = new UserEntity(username, password, email);
         session.save(userEntity);
         return userEntity;
+    }
+
+    public UserEntity getUserByEmail(String emailadr) {
+        return (UserEntity)
+                session.createQuery("from UserEntity where email=:email")
+                .setParameter("email", emailadr)
+                .uniqueResult();
     }
 
 }
