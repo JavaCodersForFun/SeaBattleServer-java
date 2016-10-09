@@ -2,7 +2,8 @@ package beans;
 
 import javax.persistence.*;
 
-@Entity(name = "users")
+@Entity
+@Table(name = "sessions", schema = "seabattle_base")
 public class UserEntity {
 
     @Id
