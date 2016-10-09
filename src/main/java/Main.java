@@ -1,6 +1,8 @@
 import org.apache.log4j.Logger;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
+import servlets.NewGameServlet;
 
 import javax.servlet.http.HttpServlet;
 
@@ -20,18 +22,15 @@ public class Main extends HttpServlet {
 
     public static void main(String[] args) {
 
-        /*
-            There's will be the point where all Servlets will be created by
-            Servlet's Factory.
-         */
+        NewGameServlet newGameServlet = new NewGameServlet();
 
         ServletContextHandler contextHandler = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        /*
-            No servlets this time.
-         */
+
+        contextHandler.addServlet(new ServletHolder(newGameServlet), "/new_game");
 
         int port = 8080;
         Server server = new Server(port);
+        server.setHandler(contextHandler);
         try {
 
             server.start();
