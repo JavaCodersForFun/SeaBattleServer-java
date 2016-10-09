@@ -43,7 +43,8 @@ public class NewGameServlet extends HttpServlet {
         // Getting user by email from request.
         UserEntity requestedUser = service.getUserByEmail(eMail);
 
-        logger.info(requestedUser.getEmail());
+        /* For user, who even don't have entity at the db it will created.
+        */
 
         session.close();
 

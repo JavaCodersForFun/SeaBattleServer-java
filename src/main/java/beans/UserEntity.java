@@ -2,6 +2,14 @@ package beans;
 
 import javax.persistence.*;
 
+/**
+ *
+ * Class that maps the db table users.
+ * Made as a bean.
+ * @author Kargin Nikita
+ *
+ */
+
 @Entity(name = "users")
 public class UserEntity {
 

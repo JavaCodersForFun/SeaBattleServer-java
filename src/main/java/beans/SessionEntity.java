@@ -2,6 +2,14 @@ package beans;
 
 import javax.persistence.*;
 
+/**
+ *
+ * Class that maps the db table sessions.
+ * Made as a bean.
+ * @author Kargin Nikita
+ *
+ */
+
 @Entity(name = "sessions")
 public class SessionEntity {
 
