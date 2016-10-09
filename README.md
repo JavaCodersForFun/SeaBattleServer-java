@@ -49,3 +49,11 @@ Log4j - http://logging.apache.org/log4j/2.x/
 </dependency>
 
 JUnit - http://junit.org/junit4/
+
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.3.1</version>
+</dependency>
+
+https://github.com/google/gson
