@@ -21,11 +21,11 @@ import java.io.IOException;
  *
  */
 
-public class NewGameServlet extends HttpServlet {
+public class AuthorizationServlet extends HttpServlet {
 
-    final private Logger logger = Logger.getLogger(NewGameServlet.class);
+    final private Logger logger = Logger.getLogger(AuthorizationServlet.class);
 
-    public NewGameServlet() {
+    public AuthorizationServlet() {
 
     }
 
@@ -43,8 +43,13 @@ public class NewGameServlet extends HttpServlet {
         // Getting user by email from request.
         UserEntity requestedUser = service.getUserByEmail(eMail);
 
-        /* For user, who even don't have entity at the db it will created.
-        */
+        if (requestedUser == null) {
+
+            Transaction transaction = session.beginTransaction();
+            service.create(null, null, eMail);
+            transaction.commit();
+
+        }
 
         session.close();
 
