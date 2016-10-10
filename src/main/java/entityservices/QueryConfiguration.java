@@ -24,7 +24,8 @@ public class QueryConfiguration {
         configuration.addAnnotatedClass(UserEntity.class);
         // Create registry for the current settings
         // From this registry we are getting connections to your tables
-        StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
+        StandardServiceRegistry serviceRegistry =
+                new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
         // Create session factory for the current config.
         this.factory = configuration.buildSessionFactory(serviceRegistry);
 
