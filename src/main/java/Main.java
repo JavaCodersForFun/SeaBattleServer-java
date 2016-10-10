@@ -2,7 +2,7 @@ import org.apache.log4j.Logger;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-import servlets.NewGameServlet;
+import servlets.AuthorizationServlet;
 
 import javax.servlet.http.HttpServlet;
 
@@ -22,11 +22,11 @@ public class Main extends HttpServlet {
 
     public static void main(String[] args) {
 
-        NewGameServlet newGameServlet = new NewGameServlet();
+        AuthorizationServlet authorizationServlet = new AuthorizationServlet();
 
         ServletContextHandler contextHandler = new ServletContextHandler(ServletContextHandler.SESSIONS);
 
-        contextHandler.addServlet(new ServletHolder(newGameServlet), "/new_game");
+        contextHandler.addServlet(new ServletHolder(authorizationServlet), "/authorize");
 
         int port = 8080;
         Server server = new Server(port);
